@@ -1,0 +1,147 @@
+:root {
+    /* Fonts */
+    --font-primary: 'Space Grotesk', sans-serif;
+    --font-secondary: 'Outfit', sans-serif;
+    
+    /* Primary Colors */
+    --color-primary: #3E7B27;    /* Deep green */
+    --color-secondary: #85A947;  /* Light green */
+    --color-sand: #EFE3C2;      /* Warm sand */
+    --color-water: #C4DFE6;     /* Light blue */
+    --color-ocean: #66A5AD;     /* Ocean blue */
+    --color-navy: #2F3C7E;      /* Deep navy */
+    --color-blush: #FBEAEB;     /* Soft pink */
+    
+    /* Extended Color Palette */
+    --color-forest-dark: #2A5618;  /* Darker shade of primary */
+    --color-leaf-light: #9DC45F;   /* Lighter shade of secondary */
+    --color-sand-dark: #D5C4A1;    /* Darker sand */
+    --color-water-light: #DBF1F6;  /* Lighter water */
+    --color-ocean-dark: #4B7A80;   /* Darker ocean */
+    --color-navy-light: #3D4B9F;   /* Lighter navy */
+    --color-blush-dark: #F2D7D9;   /* Darker blush */
+    
+    /* Gradient Combinations */
+    --gradient-forest: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    --gradient-ocean: linear-gradient(135deg, var(--color-water) 0%, var(--color-ocean) 100%);
+    --gradient-sky: linear-gradient(135deg, var(--color-water) 0%, var(--color-navy) 100%);
+    --gradient-sunset: linear-gradient(135deg, var(--color-blush) 0%, var(--color-sand) 100%);
+    --gradient-earth: linear-gradient(135deg, var(--color-forest-dark) 0%, var(--color-leaf-light) 100%);
+    
+    /* Z-Design Shadows */
+    --shadow-z1: 0 2px 4px rgba(47, 60, 126, 0.1);
+    --shadow-z2: 0 4px 8px rgba(47, 60, 126, 0.1);
+    --shadow-z3: 0 8px 16px rgba(47, 60, 126, 0.1);
+    --shadow-z4: 0 16px 32px rgba(47, 60, 126, 0.1);
+    
+    /* Overlays */
+    --overlay-dark: linear-gradient(rgba(47, 60, 126, 0.7), rgba(47, 60, 126, 0.3));
+    --overlay-light: linear-gradient(rgba(251, 234, 235, 0.9), rgba(251, 234, 235, 0.7));
+    --overlay-forest: linear-gradient(rgba(62, 123, 39, 0.8), rgba(133, 169, 71, 0.4));
+    
+    /* Spacing System */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+    
+    /* Typography Scale */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-md: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 2rem;
+    --text-4xl: 2.5rem;
+    --text-5xl: 3rem;
+    
+    /* Animation Timing */
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+    --transition-very-slow: 1000ms;
+    
+    /* Z-index Scale */
+    --z-negative: -1;
+    --z-elevate: 1;
+    --z-sticky: 100;
+    --z-drawer: 200;
+    --z-modal: 300;
+    --z-popup: 400;
+    --z-maximum: 999;
+    
+    /* UI Colors */
+    --primary-color: var(--color-primary);
+    --secondary-color: var(--color-secondary);
+    --accent-color: var(--color-ocean);
+    --background-color: var(--color-blush);
+    
+    /* Text Colors */
+    --text-dark: var(--color-navy);
+    --text-medium: var(--color-ocean);
+    --text-light: var(--color-blush);
+    
+    /* Background Colors */
+    --bg-light: var(--color-blush);
+    --bg-off-white: var(--color-sand);
+    --bg-dark: var(--color-navy);
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 4px rgba(47, 60, 126, 0.1);
+    --shadow-medium: 0 4px 6px rgba(47, 60, 126, 0.1);
+    --shadow-strong: 0 8px 16px rgba(47, 60, 126, 0.1);
+    
+    /* Card Gradients */
+    --card-gradient-1: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    --card-gradient-2: linear-gradient(45deg, var(--color-ocean), var(--color-water));
+    --card-gradient-3: linear-gradient(45deg, var(--color-navy), var(--color-ocean));
+    
+    /* Radial Gradients */
+    --radial-forest: radial-gradient(circle at center, var(--color-secondary) 0%, var(--color-primary) 100%);
+    --radial-ocean: radial-gradient(circle at center, var(--color-water) 0%, var(--color-ocean) 100%);
+    
+    /* Glowing Effects */
+    --glow-leaf: 0 0 20px rgba(76, 175, 80, 0.4);
+    --glow-water: 0 0 20px rgba(79, 195, 247, 0.4);
+    --glow-sun: 0 0 20px rgba(253, 216, 53, 0.4);
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes leaf-fall {
+    0% { transform: translateY(-100%) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Queries */
+:root {
+    --container-max-width: 1200px;
+    --container-padding: var(--space-md);
+    
+    @media (min-width: 640px) {
+        --container-padding: var(--space-lg);
+    }
+    
+    @media (min-width: 1024px) {
+        --container-padding: var(--space-xl);
+    }
+}

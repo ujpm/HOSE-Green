@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communities - HOSE</title>
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/pages.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <main class="page-content">
+        <section class="page-header">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="header-content" data-aos="fade-up">
+                    <h1>Join Our Communities</h1>
+                    <p>Connect, collaborate, and create positive environmental impact together</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="communities-section">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h2>Discover Communities</h2>
+                    <p>Find and join communities that match your environmental interests</p>
+                </div>
+
+                <div class="filters-wrapper" data-aos="fade-up">
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-th-large"></i>
+                            All Communities
+                        </button>
+                        <button class="filter-btn" data-filter="Conservation">
+                            <i class="fas fa-tree"></i>
+                            Conservation
+                        </button>
+                        <button class="filter-btn" data-filter="Education">
+                            <i class="fas fa-graduation-cap"></i>
+                            Education
+                        </button>
+                        <button class="filter-btn" data-filter="Agriculture">
+                            <i class="fas fa-seedling"></i>
+                            Agriculture
+                        </button>
+                        <button class="filter-btn" data-filter="Innovation">
+                            <i class="fas fa-lightbulb"></i>
+                            Innovation
+                        </button>
+                        <button class="filter-btn" data-filter="Urban">
+                            <i class="fas fa-city"></i>
+                            Urban
+                        </button>
+                    </div>
+
+                    <div class="search-box">
+                        <input type="text" id="communitySearch" placeholder="Search communities...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+
+                <div class="communities-grid" data-aos="fade-up">
+                    <!-- Community cards will be added here by communities.js -->
+                </div>
+
+                <div class="no-results" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>No communities found</h3>
+                    <p>Try adjusting your search or filter criteria</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h2>Featured Communities</h2>
+                    <p>Highlighted communities making significant impact</p>
+                </div>
+                <div class="featured-communities" data-aos="fade-up">
+                    <!-- Featured communities will be added here by communities.js -->
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content text-center" data-aos="fade-up">
+                    <h2>Start Your Own Community</h2>
+                    <p>Have a unique environmental initiative? Create a community and lead the change!</p>
+                    <button class="btn btn-primary btn-lg mt-4" onclick="showCreateCommunityModal()">
+                        <i class="fas fa-plus-circle"></i>
+                        Create Community
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/communities.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Central Tree -->
+    <g transform="translate(200,200)">
+        <path d="M-10 0 L10 0 L0 -120 Z" fill="#008080"/>
+        <rect x="-5" y="0" width="10" height="40" fill="#8B4513"/>
+        
+        <!-- Tree Canopy -->
+        <g transform="translate(0,-60)">
+            <circle cx="0" cy="0" r="40" fill="#50C878" opacity="0.8"/>
+            <circle cx="-30" cy="-20" r="30" fill="#008080" opacity="0.8"/>
+            <circle cx="30" cy="-20" r="30" fill="#008080" opacity="0.8"/>
+            <circle cx="0" cy="-40" r="25" fill="#50C878" opacity="0.8"/>
+        </g>
+    </g>
+    
+    <!-- People Circle -->
+    <g transform="translate(200,200)">
+        <!-- Person 1 -->
+        <g transform="rotate(0)">
+            <circle cx="0" cy="-100" r="15" fill="#FFD700"/>
+            <path d="M0 -85 L0 -60 M-15 -70 L15 -70" stroke="#FFD700" stroke-width="4"/>
+        </g>
+        <!-- Person 2 -->
+        <g transform="rotate(72)">
+            <circle cx="0" cy="-100" r="15" fill="#87CEEB"/>
+            <path d="M0 -85 L0 -60 M-15 -70 L15 -70" stroke="#87CEEB" stroke-width="4"/>
+        </g>
+        <!-- Person 3 -->
+        <g transform="rotate(144)">
+            <circle cx="0" cy="-100" r="15" fill="#E2725B"/>
+            <path d="M0 -85 L0 -60 M-15 -70 L15 -70" stroke="#E2725B" stroke-width="4"/>
+        </g>
+        <!-- Person 4 -->
+        <g transform="rotate(216)">
+            <circle cx="0" cy="-100" r="15" fill="#F4A460"/>
+            <path d="M0 -85 L0 -60 M-15 -70 L15 -70" stroke="#F4A460" stroke-width="4"/>
+        </g>
+        <!-- Person 5 -->
+        <g transform="rotate(288)">
+            <circle cx="0" cy="-100" r="15" fill="#50C878"/>
+            <path d="M0 -85 L0 -60 M-15 -70 L15 -70" stroke="#50C878" stroke-width="4"/>
+        </g>
+        
+        <!-- Connecting Lines -->
+        <circle cx="0" cy="0" r="100" stroke="#008080" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+    </g>
+    
+    <!-- Gradient Overlay -->
+    <defs>
+        <linearGradient id="earthHarmony" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#8B4513;stop-opacity:0.1"/>
+            <stop offset="50%" style="stop-color:#E2725B;stop-opacity:0.1"/>
+            <stop offset="100%" style="stop-color:#F4A460;stop-opacity:0.1"/>
+        </linearGradient>
+    </defs>
+    <rect width="400" height="400" fill="url(#earthHarmony)"/>
+</svg>

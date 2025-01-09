@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="400" fill="#90CAF9" opacity="0.1"/>
+    
+    <!-- Simplified World Map -->
+    <path d="
+        M 200,100 
+        Q 220,90 240,100 
+        T 280,110 
+        Q 300,115 320,110 
+        T 360,120
+        L 380,125
+        Q 400,130 420,125
+        T 460,115
+        Q 480,110 500,115
+        T 540,120
+        L 560,118
+        Q 580,115 600,120
+        L 620,125
+        Q 640,130 660,125
+        T 700,115" 
+        fill="#81C784" opacity="0.6" stroke="#4CAF50" stroke-width="2"/>
+    
+    <path d="
+        M 150,150
+        Q 170,145 190,150
+        T 230,160
+        Q 250,165 270,160
+        T 310,150
+        L 330,148
+        Q 350,145 370,150
+        T 410,160
+        Q 430,165 450,160
+        T 490,150
+        L 510,148
+        Q 530,145 550,150
+        T 590,160
+        Q 610,165 630,160
+        T 670,150"
+        fill="#81C784" opacity="0.6" stroke="#4CAF50" stroke-width="2"/>
+    
+    <!-- Location Markers -->
+    <g>
+        <circle cx="250" cy="130" r="5" fill="#FF7043">
+            <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="250" cy="130" r="10" fill="#FF7043" opacity="0.3">
+            <animate attributeName="r" values="5;15;5" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+    
+    <g>
+        <circle cx="450" cy="160" r="5" fill="#FF7043">
+            <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="450" cy="160" r="10" fill="#FF7043" opacity="0.3">
+            <animate attributeName="r" values="5;15;5" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+    
+    <g>
+        <circle cx="650" cy="140" r="5" fill="#FF7043">
+            <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="650" cy="140" r="10" fill="#FF7043" opacity="0.3">
+            <animate attributeName="r" values="5;15;5" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+    
+    <!-- Connection Lines -->
+    <path d="M250 130 L450 160" stroke="#4CAF50" stroke-width="1" stroke-dasharray="4 4">
+        <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite"/>
+    </path>
+    <path d="M450 160 L650 140" stroke="#4CAF50" stroke-width="1" stroke-dasharray="4 4">
+        <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite"/>
+    </path>
+</svg>
