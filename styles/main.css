@@ -85,6 +85,10 @@ a:hover {
     color: var(--text-light);
     padding: var(--spacing-xl) 0;
     text-align: center;
+    position: relative;
+    padding: 60px 0;
+    background: var(--color-background-alt);
+    margin-bottom: 40px;
 }
 
 .page-header h1 {
@@ -109,6 +113,7 @@ a:hover {
 .page-content {
     min-height: calc(100vh - 60px); /* Adjust based on header/footer height */
     padding: var(--spacing-xl) 0;
+    padding-top: 80px; /* Adjust this value based on your navbar height */
 }
 
 /* Utilities */
@@ -135,9 +140,43 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-md) 0;
+    padding: 1rem 0;
     max-width: 1200px;
     margin: 0 auto;
+    background: var(--color-background);
+    transition: all 0.3s ease;
+    background-color: var(--color-background);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 80px; /* Fixed height for navbar */
+}
+
+.navbar-brand img.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-text);
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.navbar-nav .btn.btn-outline-primary {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+}
+
+.navbar-nav .btn.btn-outline-primary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-background);
 }
 
 .nav-logo {
@@ -181,16 +220,45 @@ a:hover {
 
 /* Footer */
 .footer {
-    background: var(--bg-dark);
-    color: var(--text-light);
-    padding: var(--spacing-xl) 0 var(--spacing-md);
+    background-color: var(--color-background-alt);
+    padding: 60px 0 20px;
+    margin-top: 60px;
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-xl);
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-brand img.footer-logo {
+    width: 60px; /* Reduced from default size */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: var(--color-primary);
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 .footer-section h3 {
@@ -198,13 +266,37 @@ a:hover {
     margin-bottom: var(--spacing-md);
 }
 
+.footer-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
 .footer-section ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.footer-section ul li a:hover {
+    color: var(--color-primary);
+}
+
+.footer-section i {
+    margin-right: 8px;
+    width: 20px;
+    color: var(--color-primary);
 }
 
 .footer-section a {
@@ -221,6 +313,21 @@ a:hover {
     text-align: center;
     padding-top: var(--spacing-md);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--color-border);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 /* Responsive Design */
@@ -1159,6 +1266,7 @@ a:hover {
     margin-bottom: 15px;
     background: linear-gradient(135deg, #3498db, #2ecc71);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1261,4 +1369,73 @@ a:hover {
 
 .back-btn i {
     font-size: 1.2em;
+}
+
+@media (max-width: 991px) {
+    .navbar-brand img.logo {
+        height: 32px;
+    }
+    
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-nav .btn.btn-outline-primary {
+        margin: 0.5rem 0;
+        display: inline-block;
+    }
+
+    .page-content {
+        padding-top: 70px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Footer */
+@media (max-width: 991px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        text-align: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-brand img.footer-logo {
+        width: 50px; /* Even smaller on mobile */
+    }
 }
