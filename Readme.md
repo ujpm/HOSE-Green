@@ -76,10 +76,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact 📬
 
--🌐 **[MY WEBSITE](https://portifolio-cgu.pages.dev)**
+- 🌐 **[MY WEBSITE](https://portifolio-cgu.pages.dev)**
+- linkedin: **[My Linkedin](https://www.linkedin.com/in/ujeanpierre45/)**
 - Twitter: **[twitter](https://x.com/Uwizeyi30479056)**
 - Email: uwizeyimanajp2@gmail.com
 
 <div align="center">
-  <p>Made with ❤️ for the environment</p>
+  <p>Made with 💚 for the environment</p>
 </div>
