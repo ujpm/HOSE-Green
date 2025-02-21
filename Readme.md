@@ -1,7 +1,9 @@
 # HOSE Green 🌍
 <div align="center">
   <img src="assets/images/hose-logo.png" alt="HOSE Logo" width="200"/>
-  <img src="assets/images/profile-image.png" alt="profile image" width="200"/>
+<div align="center">
+  <img src="assets/images/hose-logo.png" alt="HOSE Logo" width="200"/>
+  <img src="assets/images/profile
   <h3>Heal Our Shared Environment</h3>
   <p>Making environmental action accessible, engaging, and rewarding</p>
 </div>
