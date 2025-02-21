@@ -76,9 +76,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact 📬
 
-- Website: [Your Website]
-- Twitter: [@YourTwitter]
-- Email: [Your Email]
+-🌐 **[MY WEBSITE](https://portifolio-cgu.pages.dev)**
+- Twitter: **[twitter](https://x.com/Uwizeyi30479056)**
+- Email: uwizeyimanajp2@gmail.com
 
 <div align="center">
   <p>Made with ❤️ for the environment</p>
