@@ -73,7 +73,7 @@
 
 .section-header h2 {
     font-size: 2.5rem;
-    color: var(--text-dark);
+    color: var(--color-secondary);
     margin-bottom: var(--spacing-sm);
 }
 

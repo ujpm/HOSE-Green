@@ -4,40 +4,44 @@
     --font-secondary: 'Outfit', sans-serif;
     
     /* Primary Colors */
-    --color-primary: #3E7B27;    /* Deep green */
-    --color-secondary: #85A947;  /* Light green */
-    --color-sand: #EFE3C2;      /* Warm sand */
-    --color-water: #C4DFE6;     /* Light blue */
-    --color-ocean: #66A5AD;     /* Ocean blue */
-    --color-navy: #2F3C7E;      /* Deep navy */
-    --color-blush: #FBEAEB;     /* Soft pink */
+    --color-primary: #85a838;    /* Green */
+    --color-secondary: #e12c27;  /* Red */
+    --color-navy: #123f54;      /* Navy */
+    --color-white: #b3c936;     /* White == changed to green*/
     
     /* Extended Color Palette */
-    --color-forest-dark: #2A5618;  /* Darker shade of primary */
-    --color-leaf-light: #9DC45F;   /* Lighter shade of secondary */
-    --color-sand-dark: #D5C4A1;    /* Darker sand */
-    --color-water-light: #DBF1F6;  /* Lighter water */
-    --color-ocean-dark: #4B7A80;   /* Darker ocean */
-    --color-navy-light: #3D4B9F;   /* Lighter navy */
-    --color-blush-dark: #F2D7D9;   /* Darker blush */
+    --color-green-dark: #6b8a2d;   /* Darker green */
+    --color-green-light: #9fbc52;  /* Lighter green */
+    --color-red-dark: #b82320;     /* Darker red */
+    --color-red-light: #e54f4b;    /* Lighter red */
+    --color-navy-dark: #0d2d3d;    /* Darker navy */
+    --color-navy-light: #1a5470;   /* Lighter navy */
     
     /* Gradient Combinations */
-    --gradient-forest: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-    --gradient-ocean: linear-gradient(135deg, var(--color-water) 0%, var(--color-ocean) 100%);
-    --gradient-sky: linear-gradient(135deg, var(--color-water) 0%, var(--color-navy) 100%);
-    --gradient-sunset: linear-gradient(135deg, var(--color-blush) 0%, var(--color-sand) 100%);
-    --gradient-earth: linear-gradient(135deg, var(--color-forest-dark) 0%, var(--color-leaf-light) 100%);
+    --gradient-green: linear-gradient(135deg, var(--color-green-dark) 0%, var(--color-green-light) 100%);
+    --gradient-red: linear-gradient(135deg, var(--color-red-dark) 0%, var(--color-red-light) 100%);
+    --gradient-navy: linear-gradient(135deg, var(--color-navy-dark) 0%, var(--color-navy-light) 100%);
     
-    /* Z-Design Shadows */
-    --shadow-sm: 0 2px 4px rgba(47, 60, 126, 0.1);
-    --shadow-md: 0 4px 8px rgba(47, 60, 126, 0.1);
-    --shadow-lg: 0 8px 16px rgba(47, 60, 126, 0.1);
-    --shadow-z4: 0 16px 32px rgba(47, 60, 126, 0.1);
+    /* UI Colors */
+    --primary-color: var(--color-primary);
+    --secondary-color: var(--color-secondary);
+    --accent-color: var(--color-navy);
+    --background-color: var(--color-white);
+    
+    /* Text Colors */
+    --text-dark: var(--color-navy);
+    --text-medium: var(--color-navy-light);
+    --text-light: var(--color-white);
+    
+    /* Background Colors */
+    --bg-light: var(--color-white);
+    --bg-off-white: #f0f5f5;
+    --bg-dark: var(--color-navy);
     
     /* Overlays */
-    --overlay-dark: linear-gradient(rgba(47, 60, 126, 0.7), rgba(47, 60, 126, 0.3));
-    --overlay-light: linear-gradient(rgba(251, 234, 235, 0.9), rgba(251, 234, 235, 0.7));
-    --overlay-forest: linear-gradient(rgba(62, 123, 39, 0.8), rgba(133, 169, 71, 0.4));
+    --overlay-dark: linear-gradient(rgba(18, 63, 84, 0.7), rgba(18, 63, 84, 0.3));
+    --overlay-light: linear-gradient(rgba(249, 255, 255, 0.9), rgba(249, 255, 255, 0.7));
+    --overlay-primary: linear-gradient(rgba(133, 168, 56, 0.8), rgba(133, 168, 56, 0.4));
     
     /* Spacing System */
     --spacing-xs: 0.25rem;  /* 4px */
@@ -80,22 +84,6 @@
     --z-popup: 400;
     --z-maximum: 999;
     
-    /* UI Colors */
-    --primary-color: var(--color-primary);
-    --secondary-color: var(--color-secondary);
-    --accent-color: var(--color-ocean);
-    --background-color: var(--color-blush);
-    
-    /* Text Colors */
-    --text-dark: var(--color-navy);
-    --text-medium: var(--color-ocean);
-    --text-light: var(--color-blush);
-    
-    /* Background Colors */
-    --bg-light: var(--color-blush);
-    --bg-off-white: var(--color-sand);
-    --bg-dark: var(--color-navy);
-    
     /* Shadows */
     --shadow-soft: 0 2px 4px rgba(47, 60, 126, 0.1);
     --shadow-medium: 0 4px 6px rgba(47, 60, 126, 0.1);
@@ -103,12 +91,12 @@
     
     /* Card Gradients */
     --card-gradient-1: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
-    --card-gradient-2: linear-gradient(45deg, var(--color-ocean), var(--color-water));
-    --card-gradient-3: linear-gradient(45deg, var(--color-navy), var(--color-ocean));
+    --card-gradient-2: linear-gradient(45deg, var(--color-navy), var(--color-primary));
+    --card-gradient-3: linear-gradient(45deg, var(--color-navy), var(--color-secondary));
     
     /* Radial Gradients */
     --radial-forest: radial-gradient(circle at center, var(--color-secondary) 0%, var(--color-primary) 100%);
-    --radial-ocean: radial-gradient(circle at center, var(--color-water) 0%, var(--color-ocean) 100%);
+    --radial-ocean: radial-gradient(circle at center, var(--color-navy) 0%, var(--color-primary) 100%);
     
     /* Glowing Effects */
     --glow-leaf: 0 0 20px rgba(76, 175, 80, 0.4);
