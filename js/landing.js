@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS
+    // Initialize AOS with updated settings
     AOS.init({
-        duration: 1000,
+        duration: 800,
         once: true,
-        offset: 100
+        offset: 100,
+        easing: 'ease-out-cubic'
     });
 
     // Typing Effect

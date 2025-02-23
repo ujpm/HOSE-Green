@@ -95,7 +95,9 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
     position: relative;
     min-height: 100vh;
-    background: var(--gradient-forest);
+    background: linear-gradient(135deg, 
+        rgba(62, 123, 39, 0.95) 0%,
+        rgba(133, 169, 71, 0.95) 100%);
     overflow: hidden;
     padding-top: 80px;
 }
@@ -106,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-content {
     position: relative;
-    z-index: var(--z-elevate);
+    z-index: 2;
     padding: var(--space-xl) 0;
 }
 
@@ -127,25 +129,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-features {
     display: flex;
-    gap: var(--space-md);
-    margin-bottom: var(--space-xl);
     flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin: var(--spacing-xl) 0;
 }
 
 .feature-tag {
-    background: rgba(251, 234, 235, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--radius-full);
-    color: var(--color-sand);
-    font-size: var(--text-sm);
+    color: var(--text-light);
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: var(--spacing-sm);
+    font-size: var(--text-sm);
+    transition: all 0.3s ease;
+}
+
+.feature-tag:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
 .feature-tag i {
-    color: var(--color-secondary);
+    color: var(--color-water);
 }
 
 .hero-image {
@@ -270,102 +278,93 @@ h1, h2, h3, h4, h5, h6 {
 /* Features Section */
 .features-section {
     padding: var(--spacing-xxl) 0;
-    background: linear-gradient(180deg, var(--bg-light) 0%, rgba(133, 169, 71, 0.1) 100%);
+    background: linear-gradient(180deg, 
+        rgba(133, 169, 71, 0.1) 0%,
+        rgba(133, 169, 71, 0.05) 100%);
+    position: relative;
+    overflow: hidden;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: var(--spacing-xl);
     margin-top: var(--spacing-xl);
 }
 
 .feature-card {
-    position: relative;
     background: var(--bg-light);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-xl);
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
     overflow: hidden;
-    height: 320px;
+    text-decoration: none;
+    transition: all 0.3s ease;
     border: 1px solid rgba(133, 169, 71, 0.1);
-}
-
-.feature-card:hover {
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(133, 169, 71, 0.3);
-    background: linear-gradient(
-        to bottom,
-        var(--bg-light),
-        rgba(133, 169, 71, 0.05)
-    );
-}
-
-.card-front,
-.card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
+    display: block;
+}
+
+.card-content {
     padding: var(--spacing-xl);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: opacity 0.3s ease;
-    background: transparent;
-}
-
-.card-back {
-    opacity: 0;
-}
-
-.feature-card:hover .card-front {
-    opacity: 0;
-}
-
-.feature-card:hover .card-back {
-    opacity: 1;
+    height: 100%;
+    gap: var(--spacing-md);
 }
 
 .card-icon {
-    font-size: 2.5rem;
+    width: 64px;
+    height: 64px;
+    background: rgba(133, 169, 71, 0.1);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
     color: var(--color-primary);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     transition: all 0.3s ease;
 }
 
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+.feature-card:hover .card-icon {
+    background: var(--color-primary);
+    color: var(--bg-light);
+}
+
 .feature-card h3 {
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-md);
+    color: var(--text-dark);
     font-size: var(--text-xl);
+    margin-bottom: var(--spacing-sm);
     font-weight: 600;
 }
 
 .feature-card p {
     color: var(--text-medium);
     margin-bottom: var(--spacing-lg);
-    font-size: var(--text-md);
     line-height: 1.6;
+    flex-grow: 1;
 }
 
-.feature-card .btn-light {
-    background: transparent;
+.card-link {
     color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border-radius: var(--radius-full);
-    transition: all 0.3s ease;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: auto;
 }
 
-.feature-card .btn-light:hover {
-    background: var(--color-primary);
-    color: var(--text-light);
-    transform: translateY(-2px);
+.card-link i {
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .card-link i {
+    transform: translateX(4px);
 }
 
 /* World Map SVG Styling */
@@ -879,6 +878,11 @@ h1, h2, h3, h4, h5, h6 {
 
     .feature-card:hover .card-back {
         display: none;
+    }
+
+    .feature-tag {
+        width: 100%;
+        justify-content: center;
     }
 }
 
