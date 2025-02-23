@@ -1,0 +1,96 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Elements -->
+    <defs>
+        <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#85A947"/>
+            <stop offset="100%" style="stop-color:#3E7B27"/>
+        </linearGradient>
+        <linearGradient id="trophyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#EFE3C2"/>
+            <stop offset="100%" style="stop-color:#D5C4A1"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Decorative Background Circles -->
+    <circle cx="100" cy="300" r="80" fill="#F5F9F1" opacity="0.3"/>
+    <circle cx="500" cy="100" r="60" fill="#F5F9F1" opacity="0.3"/>
+
+    <!-- Main Trophy -->
+    <g transform="translate(250, 100)">
+        <!-- Trophy Body -->
+        <path d="M60,0 h80 a40,40 0 0,1 40,40 v60 a40,40 0 0,1 -40,40 h-80 a40,40 0 0,1 -40,-40 v-60 a40,40 0 0,1 40,-40" 
+              fill="url(#trophyGradient)"/>
+        
+        <!-- Trophy Base -->
+        <rect x="70" y="140" width="60" height="20" fill="url(#trophyGradient)"/>
+        <rect x="85" y="160" width="30" height="40" fill="url(#trophyGradient)"/>
+        <rect x="65" y="200" width="70" height="10" fill="url(#trophyGradient)"/>
+
+        <!-- Trophy Handles -->
+        <path d="M40,30 c-30,0 -30,80 0,80" fill="none" stroke="url(#trophyGradient)" stroke-width="10"/>
+        <path d="M160,30 c30,0 30,80 0,80" fill="none" stroke="url(#trophyGradient)" stroke-width="10"/>
+
+        <!-- Environmental Elements -->
+        <g transform="translate(70, 40)">
+            <!-- Leaf Pattern -->
+            <path d="M0,0 c20,-20 60,-20 80,0 c-20,20 -60,20 -80,0" 
+                  fill="url(#leafGradient)" opacity="0.9"/>
+            <path d="M20,20 c15,-15 45,-15 60,0 c-15,15 -45,15 -60,0" 
+                  fill="url(#leafGradient)" opacity="0.7"/>
+            <path d="M40,40 c10,-10 30,-10 40,0 c-10,10 -30,10 -40,0" 
+                  fill="url(#leafGradient)" opacity="0.5"/>
+        </g>
+    </g>
+
+    <!-- Floating Leaves -->
+    <g transform="translate(450, 250)">
+        <path d="M0,0 c10,-10 30,-10 40,0 c-10,10 -30,10 -40,0" 
+              fill="url(#leafGradient)" opacity="0.6">
+            <animateTransform attributeName="transform"
+                          attributeType="XML"
+                          type="translate"
+                          values="0,0; -5,5; 0,0"
+                          dur="3s"
+                          repeatCount="indefinite"/>
+        </path>
+    </g>
+    <g transform="translate(150, 150)">
+        <path d="M0,0 c15,-15 45,-15 60,0 c-15,15 -45,15 -60,0" 
+              fill="url(#leafGradient)" opacity="0.4">
+            <animateTransform attributeName="transform"
+                          attributeType="XML"
+                          type="translate"
+                          values="0,0; 5,-5; 0,0"
+                          dur="4s"
+                          repeatCount="indefinite"/>
+        </path>
+    </g>
+
+    <!-- Stars -->
+    <g transform="translate(400, 100)">
+        <path d="M0,0 l5,15 h15 l-12,9 l4,15 l-12,-9 l-12,9 l4,-15 l-12,-9 h15 z" 
+              fill="#EFE3C2">
+            <animate attributeName="opacity"
+                     values="0.4;1;0.4"
+                     dur="2s"
+                     repeatCount="indefinite"/>
+        </path>
+    </g>
+    <g transform="translate(200, 300)">
+        <path d="M0,0 l5,15 h15 l-12,9 l4,15 l-12,-9 l-12,9 l4,-15 l-12,-9 h15 z" 
+              fill="#EFE3C2">
+            <animate attributeName="opacity"
+                     values="1;0.4;1"
+                     dur="3s"
+                     repeatCount="indefinite"/>
+        </path>
+    </g>
+
+    <!-- Text Elements -->
+    <text x="300" y="350" text-anchor="middle" 
+          font-family="Space Grotesk, sans-serif" 
+          font-size="24" 
+          fill="#3E7B27">
+        Environmental Achievements
+    </text>
+</svg>

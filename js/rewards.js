@@ -1,3 +1,14 @@
+// Constants for reusable values
+const GRID_CLASSES = {
+    rewards: 'rewards-grid',
+    featured: 'featured-rewards'
+};
+
+const CARD_CLASSES = {
+    reward: 'reward-card',
+    featured: 'featured-badge'
+};
+
 // Rewards page functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS
@@ -214,7 +225,7 @@ const redeemables = [
 ];
 
 function loadRewards(filter = 'all') {
-    const rewardsGrid = document.querySelector('.rewards-grid');
+    const rewardsGrid = document.querySelector(`.${GRID_CLASSES.rewards}`);
     if (!rewardsGrid) return;
 
     rewardsGrid.innerHTML = '';
@@ -231,7 +242,7 @@ function loadRewards(filter = 'all') {
 
 function createRewardCard(reward) {
     const card = document.createElement('div');
-    card.className = 'reward-card';
+    card.className = CARD_CLASSES.reward;
     card.setAttribute('data-aos', 'fade-up');
     
     card.innerHTML = `
@@ -240,7 +251,7 @@ function createRewardCard(reward) {
             <div class="reward-icon">
                 <span>${reward.icon}</span>
             </div>
-            ${reward.featured ? '<div class="featured-badge">Featured</div>' : ''}
+            ${reward.featured ? `<div class="${CARD_CLASSES.featured}">Featured</div>` : ''}
         </div>
         <div class="reward-content">
             <h3 class="reward-title">${reward.title}</h3>
@@ -347,7 +358,7 @@ function setupUserProfile() {
 }
 
 function loadFeaturedRewards() {
-    const featuredContainer = document.querySelector('.featured-rewards');
+    const featuredContainer = document.querySelector(`.${GRID_CLASSES.featured}`);
     if (!featuredContainer) return;
 
     const featuredRewards = rewards.filter(reward => reward.featured);
