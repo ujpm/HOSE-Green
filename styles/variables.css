@@ -29,9 +29,9 @@
     --gradient-earth: linear-gradient(135deg, var(--color-forest-dark) 0%, var(--color-leaf-light) 100%);
     
     /* Z-Design Shadows */
-    --shadow-z1: 0 2px 4px rgba(47, 60, 126, 0.1);
-    --shadow-z2: 0 4px 8px rgba(47, 60, 126, 0.1);
-    --shadow-z3: 0 8px 16px rgba(47, 60, 126, 0.1);
+    --shadow-sm: 0 2px 4px rgba(47, 60, 126, 0.1);
+    --shadow-md: 0 4px 8px rgba(47, 60, 126, 0.1);
+    --shadow-lg: 0 8px 16px rgba(47, 60, 126, 0.1);
     --shadow-z4: 0 16px 32px rgba(47, 60, 126, 0.1);
     
     /* Overlays */
@@ -40,11 +40,12 @@
     --overlay-forest: linear-gradient(rgba(62, 123, 39, 0.8), rgba(133, 169, 71, 0.4));
     
     /* Spacing System */
-    --space-xs: 0.25rem;
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
-    --space-xl: 4rem;
+    --spacing-xs: 0.25rem;  /* 4px */
+    --spacing-sm: 0.5rem;   /* 8px */
+    --spacing-md: 1rem;     /* 16px */
+    --spacing-lg: 2rem;     /* 32px */
+    --spacing-xl: 4rem;     /* 64px */
+    --spacing-xxl: 6rem;    /* 96px */
     
     /* Border Radius */
     --radius-sm: 4px;
@@ -135,13 +136,13 @@
 /* Media Queries */
 :root {
     --container-max-width: 1200px;
-    --container-padding: var(--space-md);
+    --container-padding: var(--spacing-md);
     
     @media (min-width: 640px) {
-        --container-padding: var(--space-lg);
+        --container-padding: var(--spacing-lg);
     }
     
     @media (min-width: 1024px) {
-        --container-padding: var(--space-xl);
+        --container-padding: var(--spacing-xl);
     }
 }

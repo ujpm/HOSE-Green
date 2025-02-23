@@ -4,9 +4,10 @@
 .page-header {
     position: relative;
     background: var(--gradient-forest);
-    padding: calc(var(--spacing-xxl) * 2) 0 var(--spacing-xxl);
+    padding: var(--spacing-xxl) 0;
     color: var(--text-light);
     overflow: hidden;
+    margin-bottom: var(--spacing-xl);
 }
 
 .header-overlay {
@@ -119,9 +120,9 @@
 /* Campaigns Grid */
 .campaigns-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: var(--spacing-xl);
-    padding: var(--spacing-lg) 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl) 0;
 }
 
 .campaign-card {
@@ -133,6 +134,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    padding: var(--spacing-lg);
 }
 
 .campaign-card:hover {
@@ -178,10 +180,9 @@
 }
 
 .campaign-content {
-    padding: var(--spacing-lg);
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    gap: var(--spacing-md);
 }
 
 .campaign-card h3 {
@@ -291,8 +292,8 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .campaigns-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: var(--spacing-lg);
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-md);
     }
 
     .campaign-content {
@@ -628,12 +629,11 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-content h1 {
-        font-size: 2.5rem;
+        font-size: var(--text-4xl);
     }
 
     .campaign-stats {
-        flex-wrap: wrap;
-        gap: var(--spacing-lg);
+        gap: var(--spacing-md);
     }
 
     .campaigns-grid {
