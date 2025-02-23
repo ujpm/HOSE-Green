@@ -29,7 +29,7 @@
     --background-color: var(--color-white);
     
     /* Text Colors */
-    --text-dark: var(--color-navy);
+    --text-dark: var(--color-secondary);
     --text-medium: var(--color-navy-light);
     --text-light: var(--color-white);
     
